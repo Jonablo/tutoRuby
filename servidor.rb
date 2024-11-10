@@ -4,7 +4,7 @@ require 'webrick'
 server = WEBrick::HTTPServer.new(:Port => 8000)
 
 # Define behavior when accessing the server root
-server.mount_proc '/hello' do |req, res|
+server.mount_proc '/' do |req, res|
   res.content_type = 'text/html'
   res.body = "<html><body><h1>Hello World</h1><p>Welcome to my website using Ruby.</p></body></html>"
 end
